@@ -1,0 +1,17 @@
+<resources>
+
+    <declare-styleable name="CouponView">
+        <attr name="cv_circle_gap" format="dimension|reference" />
+        <attr name="cv_outer_circle_radius" format="dimension|reference" />
+        <attr name="cv_outer_holder_radius" format="dimension|reference" />
+        <attr name="cv_inner_holder_radius" format="dimension|reference" />
+        <attr name="cv_outer_holder_color" format="color|reference" />
+        <attr name="cv_outer_circle_color" format="color|reference" />
+        <attr name="cv_inner_dashed_color" format="color|reference" />
+        <attr name="cv_inner_margin_inter" format="float" />
+        <attr name="cv_inner_divide_rates" format="float" />
+        <attr name="cv_inner_dashed_solid" format="float" />
+        <attr name="cv_inner_dashed_blank" format="float" />
+    </declare-styleable>
+
+</resources>
