@@ -11,6 +11,7 @@
         android:layout_height="111dp"
         android:layout_margin="20dp"
         android:background="@android:color/transparent"
+        android:orientation="horizontal"
         app:cv_inner_dashed_blank="5"
         app:cv_inner_dashed_color="@android:color/holo_red_light"
         app:cv_inner_dashed_solid="5"
@@ -20,7 +21,23 @@
         app:cv_outer_circle_color="#F0F0F0"
         app:cv_outer_circle_radius="10dp"
         app:cv_outer_holder_color="@android:color/white"
-        app:cv_outer_holder_radius="10dp" />
+        app:cv_outer_holder_radius="10dp">
+
+        <RelativeLayout
+            android:id="@+id/child_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/child_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+    </com.sunzn.coupon.library.CouponView>
 
     <ScrollView
         android:layout_width="match_parent"
