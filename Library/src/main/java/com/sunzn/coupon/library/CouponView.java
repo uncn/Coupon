@@ -5,13 +5,13 @@ import android.graphics.Canvas;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 /**
  * Created by sunzn on 2017/12/14.
  */
 
-public class CouponView extends FrameLayout {
+public class CouponView extends LinearLayout {
 
     private CouponViewHelper helper;
 
