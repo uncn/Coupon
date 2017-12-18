@@ -24,7 +24,6 @@ public class CouponViewHelper {
     private static final int DEFAULT_INNER_MARGIN_INTER = 10;
     private static final int DEFAULT_INNER_DASHED_INTER = 5;
     private static final int DEFAULT_OUTER_HOLDER_COLOR = 0XFFFF0000;
-    private static final int DEFAULT_INNER_HOLDER_COLOR = 0XFFFFFF00;
     private static final int DEFAULT_OUTER_CIRCLE_COLOR = 0XFF0000FF;
     private static final int DEFAULT_INNER_DASHED_COLOR = 0XFFFFFF00;
     private static final float DEFAULT_INNER_DIVIDE_RATES = 0.3F;
@@ -33,58 +32,58 @@ public class CouponViewHelper {
 
     private View view;
 
-    // view宽度
+    // CouponView 宽度
     private int viewWidth;
 
-    // view的高度
+    // CouponView 高度
     private int viewHeight;
 
     // 外层圆角矩形画笔
     private Paint outerHolderPaint;
 
-    // 外层圆角矩形画笔
+    // 内层层圆角矩形画笔
     private Paint innerRoundPaint;
 
-    // 半圆画笔
+    // 外层半圆缺口画笔
     private Paint outerCirclePaint;
 
-    // 虚线画笔
+    // 内层虚线画笔
     private Paint innerDashedPaint;
 
     // 垂直分割线比率
     private float mInnerDivideRates = DEFAULT_INNER_DIVIDE_RATES;
 
-    // 外侧圆角矩形圆角半径
+    // 外层圆角矩形圆角半径
     private float mOuterHolderRadius = DEFAULT_OUTER_HOLDER_RADIUS;
 
-    // 外侧圆角矩形填充色
+    // 外层圆角矩形填充色
     private int mOuterHolderColor;
 
-    // 内侧圆角矩形圆角半径
+    // 内层圆角矩形圆角半径
     private float mInnerHolderRadius = DEFAULT_INNER_HOLDER_RADIUS;
 
-    // 内侧圆角矩形填充色
-    private int innerRectColor = DEFAULT_INNER_HOLDER_COLOR;
-
-    // 半圆半径
+    // 外层半圆缺口半径
     private float mOuterCircleRadius = DEFAULT_OUTER_CIRCLE_RADIUS;
 
-    // 半圆颜色
+    // 外层半圆缺口颜色
     private int mOuterCircleColor = DEFAULT_OUTER_CIRCLE_COLOR;
 
-    // 虚线的颜色
+    // 内层虚线颜色
     private int mInnerDashedColor = DEFAULT_INNER_DASHED_COLOR;
 
-    // 分割线的X坐标值
+    // 分割线的 X 坐标值
     private int dividerAxisX;
 
-    // 顶部虚线距离View外层的距离
+    // 内层虚线距离外层的距离
     private float mInnerMarginInter = DEFAULT_INNER_MARGIN_INTER;
 
+    // 内层虚线的实线长度
     private float mInnerDashedSolid;
+
+    // 内层虚线的虚线长度
     private float mInnerDashedBlank;
 
-
+    // 内层虚线路径
     private Path innerPath;
 
 
