@@ -8,7 +8,7 @@
     <com.sunzn.coupon.library.CouponView
         android:id="@+id/coupon_view"
         android:layout_width="match_parent"
-        android:layout_height="111dp"
+        android:layout_height="100dp"
         android:layout_margin="20dp"
         android:background="@android:color/transparent"
         android:orientation="horizontal"
@@ -26,14 +26,72 @@
         <RelativeLayout
             android:id="@+id/child_left"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/coupon_notice_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#f0413b"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/coupon_notice_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/coupon_notice_num"
+                android:layout_alignBottom="@id/coupon_notice_num"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/coupon_notice_num"
+                android:layout_toRightOf="@id/coupon_notice_num"
+                android:text="元"
+                android:textColor="#f0413b"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/child_right"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:paddingEnd="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/coupon_notice_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新人专享代金券"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/coupon_notice_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="充值满100元立减 10 元"
+                android:textColor="#f0413b"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/coupon_notice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="有效期 1 小时"
+                android:textColor="#777777"
+                android:textSize="13sp" />
 
         </RelativeLayout>
 
