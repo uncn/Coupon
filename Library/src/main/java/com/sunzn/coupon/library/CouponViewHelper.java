@@ -9,9 +9,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
 
 /**
  * Created by sunzn on 2017/12/14.
@@ -134,46 +131,15 @@ public class CouponViewHelper {
         innerPath = new Path();
     }
 
-    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        viewWidth = View.MeasureSpec.getSize(widthMeasureSpec);
-        viewHeight = View.MeasureSpec.getSize(heightMeasureSpec);
-        calculate();
-        view.invalidate();
-        Log.e("sunzn", "onMeasure");
-    }
-
     public void onSizeChanged(int w, int h) {
         viewWidth = w;
         viewHeight = h;
         calculate();
         view.invalidate();
-        Log.e("sunzn", "onSizeChanged");
     }
 
     private void calculate() {
         dividerAxisX = (int) (viewWidth * mInnerDivideRates);
-        reSizeChildLayoutParams();
-    }
-
-    private void reSizeChildLayoutParams() {
-        if (view.getChildCount() == 2) {
-            View childL = view.getChildAt(0);
-            View childR = view.getChildAt(1);
-
-            ViewGroup.LayoutParams paramsL = childL.getLayoutParams();
-            paramsL.width = dividerAxisX;
-            paramsL.height = ViewGroup.LayoutParams.MATCH_PARENT;
-            childL.setLayoutParams(paramsL);
-            childL.requestLayout();
-
-            ViewGroup.LayoutParams paramsR = childR.getLayoutParams();
-            paramsR.width = viewWidth - dividerAxisX;
-            paramsR.height = ViewGroup.LayoutParams.MATCH_PARENT;
-            childR.setLayoutParams(paramsR);
-            childR.requestLayout();
-        } else {
-            throw new RuntimeException("CouponView can only have two children");
-        }
     }
 
     @SuppressLint("DrawAllocation")
