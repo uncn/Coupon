@@ -147,6 +147,7 @@ public class CouponViewHelper {
         viewHeight = h;
         calculate();
         view.invalidate();
+        Log.e("sunzn", "onSizeChanged");
     }
 
     private void calculate() {
@@ -163,11 +164,13 @@ public class CouponViewHelper {
             paramsL.width = dividerAxisX;
             paramsL.height = ViewGroup.LayoutParams.MATCH_PARENT;
             childL.setLayoutParams(paramsL);
+            childL.requestLayout();
 
             ViewGroup.LayoutParams paramsR = childR.getLayoutParams();
             paramsR.width = viewWidth - dividerAxisX;
             paramsR.height = ViewGroup.LayoutParams.MATCH_PARENT;
             childR.setLayoutParams(paramsR);
+            childR.requestLayout();
         } else {
             throw new RuntimeException("CouponView can only have two children");
         }
