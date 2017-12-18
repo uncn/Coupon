@@ -142,6 +142,13 @@ public class CouponViewHelper {
         Log.e("sunzn", "onMeasure");
     }
 
+    public void onSizeChanged(int w, int h) {
+        viewWidth = w;
+        viewHeight = h;
+        calculate();
+        view.invalidate();
+    }
+
     private void calculate() {
         dividerAxisX = (int) (viewWidth * mInnerDivideRates);
         reSizeChildLayoutParams();
