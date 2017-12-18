@@ -87,7 +87,6 @@ public class CouponViewHelper {
     // 内层虚线路径
     private Path innerPath;
 
-
     public CouponViewHelper(CouponView view, Context context, AttributeSet attrs, int defStyleAttr) {
         this.context = context;
         this.view = view;
