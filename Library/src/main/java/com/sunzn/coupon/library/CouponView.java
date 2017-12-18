@@ -35,6 +35,12 @@ public class CouponView extends LinearLayout {
     }
 
     @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        helper.onSizeChanged(w, h);
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         helper.onDraw(canvas);
