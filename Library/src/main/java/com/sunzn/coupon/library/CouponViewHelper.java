@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -133,11 +134,12 @@ public class CouponViewHelper {
         innerPath = new Path();
     }
 
-    public void onSizeChanged(int w, int h) {
-        viewWidth = w;
-        viewHeight = h;
+    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        viewWidth = View.MeasureSpec.getSize(widthMeasureSpec);
+        viewHeight = View.MeasureSpec.getSize(heightMeasureSpec);
         calculate();
         view.invalidate();
+        Log.e("sunzn", "onMeasure");
     }
 
     private void calculate() {
@@ -149,14 +151,15 @@ public class CouponViewHelper {
         if (view.getChildCount() == 2) {
             View childL = view.getChildAt(0);
             View childR = view.getChildAt(1);
+
             ViewGroup.LayoutParams paramsL = childL.getLayoutParams();
             paramsL.width = dividerAxisX;
-            paramsL.height = viewHeight;
+            paramsL.height = ViewGroup.LayoutParams.MATCH_PARENT;
             childL.setLayoutParams(paramsL);
 
             ViewGroup.LayoutParams paramsR = childR.getLayoutParams();
             paramsR.width = viewWidth - dividerAxisX;
-            paramsR.height = viewHeight;
+            paramsR.height = ViewGroup.LayoutParams.MATCH_PARENT;
             childR.setLayoutParams(paramsR);
         } else {
             throw new RuntimeException("CouponView can only have two children");
@@ -498,4 +501,5 @@ public class CouponViewHelper {
             this.view.invalidate();
         }
     }
+
 }
