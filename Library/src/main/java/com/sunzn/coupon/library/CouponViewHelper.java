@@ -10,6 +10,7 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * Created by sunzn on 2017/12/14.
@@ -30,7 +31,7 @@ public class CouponViewHelper {
 
     private Context context;
 
-    private View view;
+    private CouponView view;
 
     // CouponView 宽度
     private int viewWidth;
@@ -142,6 +143,25 @@ public class CouponViewHelper {
 
     private void calculate() {
         dividerAxisX = (int) (viewWidth * mInnerDivideRates);
+        reSizeChildLayoutParams();
+    }
+
+    private void reSizeChildLayoutParams() {
+        if (view.getChildCount() == 2) {
+            View childL = view.getChildAt(0);
+            View childR = view.getChildAt(1);
+            ViewGroup.LayoutParams paramsL = childL.getLayoutParams();
+            paramsL.width = dividerAxisX;
+            paramsL.height = viewHeight;
+            childL.setLayoutParams(paramsL);
+
+            ViewGroup.LayoutParams paramsR = childR.getLayoutParams();
+            paramsR.width = viewWidth - dividerAxisX;
+            paramsR.height = viewHeight;
+            childR.setLayoutParams(paramsR);
+        } else {
+            throw new RuntimeException("CouponView can only have two children");
+        }
     }
 
     @SuppressLint("DrawAllocation")
