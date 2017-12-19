@@ -34,6 +34,19 @@ dependencies {
     app:cv_outer_holder_radius="10dp" />
 ```
 
+| Attribute              | Describe                               | Additional                                                        |
+| ---------------------- | -------------------------------------- | ----------------------------------------------------------------- |
+| cv_outer_holder_radius | Width of circle and cursor             | The greater the value, the greater the width of circle and cursor |
+| cv_outer_holder_color  | Color of bottom disc                   | Support color                                                     |
+| cv_outer_circle_radius | Color of middle circle                 | Support color                                                     |
+| cv_outer_circle_color  | Color of top cursor                    | Support color                                                     |
+| cv_inner_margin_inter  | Text to show in center of disc         | Support text and string reference                                 |
+| cv_inner_holder_radius | Text Color                             | Support color                                                     |
+| cv_inner_dashed_color  | Text size                              | The larger the value, the larger the text                         |
+| cv_inner_divide_rates  | Time to wait                           | The larger the value, the more time to wait                       |
+| cv_inner_dashed_solid  | The position where the curse to start  | Default value is 270                                              |
+| cv_inner_dashed_blank  | The position where the curse to start  | Default value is 270                                              |
+
 ### License
 ```
 Copyright [2017-2018] sunzn
