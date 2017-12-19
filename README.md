@@ -34,18 +34,18 @@ dependencies {
     app:cv_outer_holder_radius="10dp" />
 ```
 
-| Attribute              | Describe                                   | Additional                          |
-| ---------------------- | ------------------------------------------ | ----------------------------------- |
-| cv_outer_holder_radius | The radius of the outer round rect         | Support dimension and reference     |
-| cv_outer_holder_color  | The Fill color of the outer round rect     | Support color                       |
-| cv_outer_circle_radius | The radius of the outer notch circle       | Support dimension and reference     |
-| cv_outer_circle_color  | The color of the outer notch circle        | Support color                       |
-| cv_inner_margin_inter  | The gap between the inner and outer layers | Support float                       |
-| cv_inner_holder_radius | The radius of the inner round rect         | Support dimension and reference     |
-| cv_inner_dashed_color  | The dotted color                           | Support color                       |
-| cv_inner_divide_rates  | Vertical dotted line segmentation rate     | The value is 0 to 1,default is 0.3F |
-| cv_inner_dashed_solid  | The length of the solid line               | Default value is 5                  |
-| cv_inner_dashed_blank  | Dotted length                              | Default value is 5                  |
+| Attribute              | Describe                                   | Additional                           |
+| ---------------------- | ------------------------------------------ | ------------------------------------ |
+| cv_outer_holder_radius | The radius of the outer round rect         | Support dimension and reference      |
+| cv_outer_holder_color  | The Fill color of the outer round rect     | Support color                        |
+| cv_outer_circle_radius | The radius of the outer notch circle       | Support dimension and reference      |
+| cv_outer_circle_color  | The color of the outer notch circle        | Support color                        |
+| cv_inner_margin_inter  | The gap between the inner and outer layers | Support float                        |
+| cv_inner_holder_radius | The radius of the inner round rect         | Support dimension and reference      |
+| cv_inner_dashed_color  | The dotted color                           | Support color                        |
+| cv_inner_divide_rates  | Vertical dotted line segmentation rate     | The value is 0 to 1, default is 0.3F |
+| cv_inner_dashed_solid  | The length of the solid line               | Default value is 5                   |
+| cv_inner_dashed_blank  | Dotted length                              | Default value is 5                   |
 
 ### License
 ```
