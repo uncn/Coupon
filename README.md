@@ -44,8 +44,8 @@ dependencies {
 | cv_inner_holder_radius | The radius of the inner round rect         | Support color                                                     |
 | cv_inner_dashed_color  | The dotted color                           | The larger the value, the larger the text                         |
 | cv_inner_divide_rates  | Vertical dotted line segmentation rate     | The larger the value, the more time to wait                       |
-| cv_inner_dashed_solid  | The length of the solid line               | Default value is 270                                              |
-| cv_inner_dashed_blank  | Dotted length                              | Default value is 270                                              |
+| cv_inner_dashed_solid  | The length of the solid line               | Default value is 5                                              |
+| cv_inner_dashed_blank  | Dotted length                              | Default value is 5                                              |
 
 ### License
 ```
