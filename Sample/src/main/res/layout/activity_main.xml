@@ -17,7 +17,7 @@
         app:cv_inner_dashed_solid="5"
         app:cv_inner_divide_rates="0.285"
         app:cv_inner_holder_radius="10dp"
-        app:cv_inner_margin_inter="10"
+        app:cv_inner_margin_inter="30"
         app:cv_outer_circle_color="#F0F0F0"
         app:cv_outer_circle_radius="10dp"
         app:cv_outer_holder_color="@android:color/white"
