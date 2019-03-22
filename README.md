@@ -11,7 +11,7 @@ A nice coupon view that you can customize for some properties.
 ### Gradle
 ```groovy
 dependencies {
-    compile 'com.github.ShortStickBoy:Coupon:V4.0.0'
+    implementation 'com.github.ShortStickBoy:Coupon:4.0.1'
 }
 ```
 
@@ -51,7 +51,7 @@ dependencies {
 
 ### License
 ```
-Copyright [2017-2018] sunzn
+Copyright [2017-2019] sunzn
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
